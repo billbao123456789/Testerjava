@@ -1,0 +1,3613 @@
+{
+	"info": {
+		"_postman_id": "1300dfd8-c494-492d-bbb5-748b4aa03b88",
+		"name": "Test API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28138620",
+		"_collection_link": "https://lunar-space-609362.postman.co/workspace/BT-funix~bb5d6cef-d151-4221-9b76-9363ebb74649/collection/28138620-1300dfd8-c494-492d-bbb5-748b4aa03b88?action=share&source=collection_link&creator=28138620"
+	},
+	"item": [
+		{
+			"name": "1-1-1 Đăng ký ứng viên API điền đủ thông tin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// pm.test(\"Đăng kí thông tin và tài khoản thành công\", function () {\r",
+							"//     pm.response.to.have.status(201);\r",
+							"// });\r",
+							"// pm.test(\"Đã xảy ra lỗi khi đăng ký\", function () {\r",
+							"//     pm.response.to.have.status(500);\r",
+							"// });\r",
+							"if(pm.response.code == 201){\r",
+							"    pm.test(\"Đăng kí thông tin và tài khoản thành công\");\r",
+							"} else if(pm.response.code == 500){\r",
+							"    pm.test(\"Đã xảy ra lỗi khi đăng ký\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Gia Bao",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "nguyenphamgiabao2021@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "account",
+							"value": "nguyenphamgiabao",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "0938835447",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "Nam",
+							"type": "text"
+						},
+						{
+							"key": "birthday",
+							"value": "07/02/1996",
+							"type": "text"
+						},
+						{
+							"key": "experience",
+							"value": "fresher",
+							"type": "text"
+						},
+						{
+							"key": "skill",
+							"value": "tester",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Fresher tester",
+							"type": "text"
+						},
+						{
+							"key": "foreiginLanguage",
+							"value": "Basic",
+							"type": "text"
+						},
+						{
+							"key": "education",
+							"value": "university",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "/C:/Users/Pavilion/Downloads/20230913_102521.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/users/register",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-1-2 Đăng ký ứng viên API để trống name",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// pm.test(\"Đăng kí thông tin và tài khoản thành công\", function () {\r",
+							"//     pm.response.to.have.status(201);\r",
+							"// });\r",
+							"// pm.test(\"Đã xảy ra lỗi khi đăng ký\", function () {\r",
+							"//     pm.response.to.have.status(500);\r",
+							"// });\r",
+							"if(pm.response.code == 201){\r",
+							"    pm.test(\"Đăng kí thông tin và tài khoản thành công\");\r",
+							"} else if(pm.response.code == 500){\r",
+							"    pm.test(\"Đã xảy ra lỗi khi đăng ký\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Gia Bao",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "nguyenphamgiabao2021@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "account",
+							"value": "nguyenphamgiabao",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "0938835447",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "Nam",
+							"type": "text"
+						},
+						{
+							"key": "birthday",
+							"value": "07/02/1996",
+							"type": "text"
+						},
+						{
+							"key": "experience",
+							"value": "fresher",
+							"type": "text"
+						},
+						{
+							"key": "skill",
+							"value": "tester",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Fresher tester",
+							"type": "text"
+						},
+						{
+							"key": "foreiginLanguage",
+							"value": "Basic",
+							"type": "text"
+						},
+						{
+							"key": "education",
+							"value": "university",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "/C:/Users/Pavilion/Downloads/b8fa36cd3f83eaddb392.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/users/register",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-1-3 Đăng ký ứng viên API để trống email",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// pm.test(\"Đăng kí thông tin và tài khoản thành công\", function () {\r",
+							"//     pm.response.to.have.status(201);\r",
+							"// });\r",
+							"// pm.test(\"Đã xảy ra lỗi khi đăng ký\", function () {\r",
+							"//     pm.response.to.have.status(500);\r",
+							"// });\r",
+							"if(pm.response.code == 201){\r",
+							"    pm.test(\"Đăng kí thông tin và tài khoản thành công\");\r",
+							"} else if(pm.response.code == 500){\r",
+							"    pm.test(\"Đã xảy ra lỗi khi đăng ký\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Gia Bao",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "nguyenphamgiabao2021@gmail.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "account",
+							"value": "nguyenphamgiabao",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "0938835447",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "Nam",
+							"type": "text"
+						},
+						{
+							"key": "birthday",
+							"value": "07/02/1996",
+							"type": "text"
+						},
+						{
+							"key": "experience",
+							"value": "fresher",
+							"type": "text"
+						},
+						{
+							"key": "skill",
+							"value": "tester",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Fresher tester",
+							"type": "text"
+						},
+						{
+							"key": "foreiginLanguage",
+							"value": "Basic",
+							"type": "text"
+						},
+						{
+							"key": "education",
+							"value": "university",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "/C:/Users/Pavilion/Downloads/b8fa36cd3f83eaddb392.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/users/register",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-1-4 Đăng ký ứng viên API để trống account",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// pm.test(\"Đăng kí thông tin và tài khoản thành công\", function () {\r",
+							"//     pm.response.to.have.status(201);\r",
+							"// });\r",
+							"// pm.test(\"Đã xảy ra lỗi khi đăng ký\", function () {\r",
+							"//     pm.response.to.have.status(500);\r",
+							"// });\r",
+							"if(pm.response.code == 201){\r",
+							"    pm.test(\"Đăng kí thông tin và tài khoản thành công\");\r",
+							"} else if(pm.response.code == 500){\r",
+							"    pm.test(\"Đã xảy ra lỗi khi đăng ký\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Gia Bao",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "nguyenphamgiabao2021@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "account",
+							"value": "nguyenphamgiabao",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "0938835447",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "Nam",
+							"type": "text"
+						},
+						{
+							"key": "birthday",
+							"value": "07/02/1996",
+							"type": "text"
+						},
+						{
+							"key": "experience",
+							"value": "fresher",
+							"type": "text"
+						},
+						{
+							"key": "skill",
+							"value": "tester",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Fresher tester",
+							"type": "text"
+						},
+						{
+							"key": "foreiginLanguage",
+							"value": "Basic",
+							"type": "text"
+						},
+						{
+							"key": "education",
+							"value": "university",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "/C:/Users/Pavilion/Downloads/b8fa36cd3f83eaddb392.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/users/register",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-1-5 Đăng ký ứng viên API để trống password",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// pm.test(\"Đăng kí thông tin và tài khoản thành công\", function () {\r",
+							"//     pm.response.to.have.status(201);\r",
+							"// });\r",
+							"// pm.test(\"Đã xảy ra lỗi khi đăng ký\", function () {\r",
+							"//     pm.response.to.have.status(500);\r",
+							"// });\r",
+							"if(pm.response.code == 201){\r",
+							"    pm.test(\"Đăng kí thông tin và tài khoản thành công\");\r",
+							"} else if(pm.response.code == 500){\r",
+							"    pm.test(\"Đã xảy ra lỗi khi đăng ký\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Gia Bao",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "nguyenphamgiabao2021@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "account",
+							"value": "nguyenphamgiabao",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "phone",
+							"value": "0938835447",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "Nam",
+							"type": "text"
+						},
+						{
+							"key": "birthday",
+							"value": "07/02/1996",
+							"type": "text"
+						},
+						{
+							"key": "experience",
+							"value": "fresher",
+							"type": "text"
+						},
+						{
+							"key": "skill",
+							"value": "tester",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Fresher tester",
+							"type": "text"
+						},
+						{
+							"key": "foreiginLanguage",
+							"value": "Basic",
+							"type": "text"
+						},
+						{
+							"key": "education",
+							"value": "university",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "/C:/Users/Pavilion/Downloads/b8fa36cd3f83eaddb392.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/users/register",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-1-6 Đăng ký ứng viên API để trống phone",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// pm.test(\"Đăng kí thông tin và tài khoản thành công\", function () {\r",
+							"//     pm.response.to.have.status(201);\r",
+							"// });\r",
+							"// pm.test(\"Đã xảy ra lỗi khi đăng ký\", function () {\r",
+							"//     pm.response.to.have.status(500);\r",
+							"// });\r",
+							"if(pm.response.code == 201){\r",
+							"    pm.test(\"Đăng kí thông tin và tài khoản thành công\");\r",
+							"} else if(pm.response.code == 500){\r",
+							"    pm.test(\"Đã xảy ra lỗi khi đăng ký\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Gia Bao",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "nguyenphamgiabao2021@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "account",
+							"value": "nguyenphamgiabao",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "0938835447",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "sex",
+							"value": "Nam",
+							"type": "text"
+						},
+						{
+							"key": "birthday",
+							"value": "07/02/1996",
+							"type": "text"
+						},
+						{
+							"key": "experience",
+							"value": "fresher",
+							"type": "text"
+						},
+						{
+							"key": "skill",
+							"value": "tester",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Fresher tester",
+							"type": "text"
+						},
+						{
+							"key": "foreiginLanguage",
+							"value": "Basic",
+							"type": "text"
+						},
+						{
+							"key": "education",
+							"value": "university",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "/C:/Users/Pavilion/Downloads/b8fa36cd3f83eaddb392.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/users/register",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-1-7 Đăng ký ứng viên API để trống sex",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// pm.test(\"Đăng kí thông tin và tài khoản thành công\", function () {\r",
+							"//     pm.response.to.have.status(201);\r",
+							"// });\r",
+							"// pm.test(\"Đã xảy ra lỗi khi đăng ký\", function () {\r",
+							"//     pm.response.to.have.status(500);\r",
+							"// });\r",
+							"if(pm.response.code == 201){\r",
+							"    pm.test(\"Đăng kí thông tin và tài khoản thành công\");\r",
+							"} else if(pm.response.code == 500){\r",
+							"    pm.test(\"Đã xảy ra lỗi khi đăng ký\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Gia Bao",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "nguyenphamgiabao2021@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "account",
+							"value": "nguyenphamgiabao",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "0938835447",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "Nam",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "birthday",
+							"value": "07/02/1996",
+							"type": "text"
+						},
+						{
+							"key": "experience",
+							"value": "fresher",
+							"type": "text"
+						},
+						{
+							"key": "skill",
+							"value": "tester",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Fresher tester",
+							"type": "text"
+						},
+						{
+							"key": "foreiginLanguage",
+							"value": "Basic",
+							"type": "text"
+						},
+						{
+							"key": "education",
+							"value": "university",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "/C:/Users/Pavilion/Downloads/b8fa36cd3f83eaddb392.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/users/register",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-1-8 Đăng ký ứng viên API để trống birthday",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// pm.test(\"Đăng kí thông tin và tài khoản thành công\", function () {\r",
+							"//     pm.response.to.have.status(201);\r",
+							"// });\r",
+							"// pm.test(\"Đã xảy ra lỗi khi đăng ký\", function () {\r",
+							"//     pm.response.to.have.status(500);\r",
+							"// });\r",
+							"if(pm.response.code == 201){\r",
+							"    pm.test(\"Đăng kí thông tin và tài khoản thành công\");\r",
+							"} else if(pm.response.code == 500){\r",
+							"    pm.test(\"Đã xảy ra lỗi khi đăng ký\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Gia Bao",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "nguyenphamgiabao2021@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "account",
+							"value": "nguyenphamgiabao",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "0938835447",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "Nam",
+							"type": "text"
+						},
+						{
+							"key": "birthday",
+							"value": "07/02/1996",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "experience",
+							"value": "fresher",
+							"type": "text"
+						},
+						{
+							"key": "skill",
+							"value": "tester",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Fresher tester",
+							"type": "text"
+						},
+						{
+							"key": "foreiginLanguage",
+							"value": "Basic",
+							"type": "text"
+						},
+						{
+							"key": "education",
+							"value": "university",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "/C:/Users/Pavilion/Downloads/b8fa36cd3f83eaddb392.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/users/register",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-1-9 Đăng ký ứng viên API để trống experience",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// pm.test(\"Đăng kí thông tin và tài khoản thành công\", function () {\r",
+							"//     pm.response.to.have.status(201);\r",
+							"// });\r",
+							"// pm.test(\"Đã xảy ra lỗi khi đăng ký\", function () {\r",
+							"//     pm.response.to.have.status(500);\r",
+							"// });\r",
+							"if(pm.response.code == 201){\r",
+							"    pm.test(\"Đăng kí thông tin và tài khoản thành công\");\r",
+							"} else if(pm.response.code == 500){\r",
+							"    pm.test(\"Đã xảy ra lỗi khi đăng ký\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Gia Bao",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "nguyenphamgiabao2021@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "account",
+							"value": "nguyenphamgiabao",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "0938835447",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "Nam",
+							"type": "text"
+						},
+						{
+							"key": "birthday",
+							"value": "07/02/1996",
+							"type": "text"
+						},
+						{
+							"key": "experience",
+							"value": "fresher",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "skill",
+							"value": "tester",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Fresher tester",
+							"type": "text"
+						},
+						{
+							"key": "foreiginLanguage",
+							"value": "Basic",
+							"type": "text"
+						},
+						{
+							"key": "education",
+							"value": "university",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "/C:/Users/Pavilion/Downloads/b8fa36cd3f83eaddb392.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/users/register",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-1-10 Đăng ký ứng viên API để trống skill",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// pm.test(\"Đăng kí thông tin và tài khoản thành công\", function () {\r",
+							"//     pm.response.to.have.status(201);\r",
+							"// });\r",
+							"// pm.test(\"Đã xảy ra lỗi khi đăng ký\", function () {\r",
+							"//     pm.response.to.have.status(500);\r",
+							"// });\r",
+							"if(pm.response.code == 201){\r",
+							"    pm.test(\"Đăng kí thông tin và tài khoản thành công\");\r",
+							"} else if(pm.response.code == 500){\r",
+							"    pm.test(\"Đã xảy ra lỗi khi đăng ký\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Gia Bao",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "nguyenphamgiabao2021@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "account",
+							"value": "nguyenphamgiabao",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "0938835447",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "Nam",
+							"type": "text"
+						},
+						{
+							"key": "birthday",
+							"value": "07/02/1996",
+							"type": "text"
+						},
+						{
+							"key": "experience",
+							"value": "fresher",
+							"type": "text"
+						},
+						{
+							"key": "skill",
+							"value": "tester",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "Fresher tester",
+							"type": "text"
+						},
+						{
+							"key": "foreiginLanguage",
+							"value": "Basic",
+							"type": "text"
+						},
+						{
+							"key": "education",
+							"value": "university",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "/C:/Users/Pavilion/Downloads/b8fa36cd3f83eaddb392.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/users/register",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-1-11 Đăng ký ứng viên API để trống description",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// pm.test(\"Đăng kí thông tin và tài khoản thành công\", function () {\r",
+							"//     pm.response.to.have.status(201);\r",
+							"// });\r",
+							"// pm.test(\"Đã xảy ra lỗi khi đăng ký\", function () {\r",
+							"//     pm.response.to.have.status(500);\r",
+							"// });\r",
+							"if(pm.response.code == 201){\r",
+							"    pm.test(\"Đăng kí thông tin và tài khoản thành công\");\r",
+							"} else if(pm.response.code == 500){\r",
+							"    pm.test(\"Đã xảy ra lỗi khi đăng ký\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Gia Bao",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "nguyenphamgiabao2021@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "account",
+							"value": "nguyenphamgiabao",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "0938835447",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "Nam",
+							"type": "text"
+						},
+						{
+							"key": "birthday",
+							"value": "07/02/1996",
+							"type": "text"
+						},
+						{
+							"key": "experience",
+							"value": "fresher",
+							"type": "text"
+						},
+						{
+							"key": "skill",
+							"value": "tester",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Fresher tester",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "foreiginLanguage",
+							"value": "Basic",
+							"type": "text"
+						},
+						{
+							"key": "education",
+							"value": "university",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "/C:/Users/Pavilion/Downloads/b8fa36cd3f83eaddb392.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/users/register",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-1-12 Đăng ký ứng viên API để trống foreiginLanguage",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// pm.test(\"Đăng kí thông tin và tài khoản thành công\", function () {\r",
+							"//     pm.response.to.have.status(201);\r",
+							"// });\r",
+							"// pm.test(\"Đã xảy ra lỗi khi đăng ký\", function () {\r",
+							"//     pm.response.to.have.status(500);\r",
+							"// });\r",
+							"if(pm.response.code == 201){\r",
+							"    pm.test(\"Đăng kí thông tin và tài khoản thành công\");\r",
+							"} else if(pm.response.code == 500){\r",
+							"    pm.test(\"Đã xảy ra lỗi khi đăng ký\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Gia Bao",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "nguyenphamgiabao2021@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "account",
+							"value": "nguyenphamgiabao",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "0938835447",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "Nam",
+							"type": "text"
+						},
+						{
+							"key": "birthday",
+							"value": "07/02/1996",
+							"type": "text"
+						},
+						{
+							"key": "experience",
+							"value": "fresher",
+							"type": "text"
+						},
+						{
+							"key": "skill",
+							"value": "tester",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Fresher tester",
+							"type": "text"
+						},
+						{
+							"key": "foreiginLanguage",
+							"value": "Basic",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "education",
+							"value": "university",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "/C:/Users/Pavilion/Downloads/b8fa36cd3f83eaddb392.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/users/register",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-1-13 Đăng ký ứng viên API để trống Education",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// pm.test(\"Đăng kí thông tin và tài khoản thành công\", function () {\r",
+							"//     pm.response.to.have.status(201);\r",
+							"// });\r",
+							"// pm.test(\"Đã xảy ra lỗi khi đăng ký\", function () {\r",
+							"//     pm.response.to.have.status(500);\r",
+							"// });\r",
+							"if(pm.response.code == 201){\r",
+							"    pm.test(\"Đăng kí thông tin và tài khoản thành công\");\r",
+							"} else if(pm.response.code == 500){\r",
+							"    pm.test(\"Đã xảy ra lỗi khi đăng ký\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Gia Bao",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "nguyenphamgiabao2021@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "account",
+							"value": "nguyenphamgiabao",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "0938835447",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "Nam",
+							"type": "text"
+						},
+						{
+							"key": "birthday",
+							"value": "07/02/1996",
+							"type": "text"
+						},
+						{
+							"key": "experience",
+							"value": "fresher",
+							"type": "text"
+						},
+						{
+							"key": "skill",
+							"value": "tester",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Fresher tester",
+							"type": "text"
+						},
+						{
+							"key": "foreiginLanguage",
+							"value": "Basic",
+							"type": "text"
+						},
+						{
+							"key": "education",
+							"value": "university",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "/C:/Users/Pavilion/Downloads/b8fa36cd3f83eaddb392.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/users/register",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-1-14 Đăng ký ứng viên API để trống Avatar",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// pm.test(\"Đăng kí thông tin và tài khoản thành công\", function () {\r",
+							"//     pm.response.to.have.status(201);\r",
+							"// });\r",
+							"// pm.test(\"Đã xảy ra lỗi khi đăng ký\", function () {\r",
+							"//     pm.response.to.have.status(500);\r",
+							"// });\r",
+							"if(pm.response.code == 201){\r",
+							"    pm.test(\"Đăng kí thông tin và tài khoản thành công\");\r",
+							"} else if(pm.response.code == 500){\r",
+							"    pm.test(\"Đã xảy ra lỗi khi đăng ký\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Gia Bao",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "nguyenphamgiabao2021@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "account",
+							"value": "nguyenphamgiabao",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "0938835447",
+							"type": "text"
+						},
+						{
+							"key": "sex",
+							"value": "Nam",
+							"type": "text"
+						},
+						{
+							"key": "birthday",
+							"value": "07/02/1996",
+							"type": "text"
+						},
+						{
+							"key": "experience",
+							"value": "fresher",
+							"type": "text"
+						},
+						{
+							"key": "skill",
+							"value": "tester",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Fresher tester",
+							"type": "text"
+						},
+						{
+							"key": "foreiginLanguage",
+							"value": "Basic",
+							"type": "text"
+						},
+						{
+							"key": "education",
+							"value": "university",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "/C:/Users/Pavilion/Downloads/b8fa36cd3f83eaddb392.jpg",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/users/register",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-1-15 Đăng ký ứng viên API để trống 13 trường thông tin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// pm.test(\"Đăng kí thông tin và tài khoản thành công\", function () {\r",
+							"//     pm.response.to.have.status(201);\r",
+							"// });\r",
+							"// pm.test(\"Đã xảy ra lỗi khi đăng ký\", function () {\r",
+							"//     pm.response.to.have.status(500);\r",
+							"// });\r",
+							"if(pm.response.code == 201){\r",
+							"    pm.test(\"Đăng kí thông tin và tài khoản thành công\");\r",
+							"} else if(pm.response.code == 500){\r",
+							"    pm.test(\"Đã xảy ra lỗi khi đăng ký\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Gia Bao",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "nguyenphamgiabao2021@gmail.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "account",
+							"value": "nguyenphamgiabao",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "phone",
+							"value": "0938835447",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "sex",
+							"value": "Nam",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "birthday",
+							"value": "07/02/1996",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "experience",
+							"value": "fresher",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "skill",
+							"value": "tester",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "Fresher tester",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "foreiginLanguage",
+							"value": "Basic",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "education",
+							"value": "university",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "/C:/Users/Pavilion/Downloads/b8fa36cd3f83eaddb392.jpg",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/users/register",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-2-1 Đăng nhập(dành cho ứng viên) khi đăng nhập đúng usetname và password",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(pm.response.code == 200){\r",
+							"    pm.test(\"Đăng nhập thành công\");\r",
+							"    pm.environment.set(\"token\", pm.response.json().token);\r",
+							"}else if(pm.response.code == 400){\r",
+							"    message = \"Tài khoản hoặc mật khẩu không đúng\";\r",
+							"    if(pm.response.json().message == message){\r",
+							"        pm.test(\"Tài khoản người dùng không tồn tại\");\r",
+							"    }else{\r",
+							"        pm.test(\"Mật khẩu không hợp lệ, mật khẩu phải tối thiểu 8 kí tự, bao gồm chữ hoa, thường, số\");\r",
+							"    }\r",
+							"}else if(pm.response.code == 404){\r",
+							"     pm.test(\"Tài khoản người dùng không tồn tại\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account\":\"nguyenphamgiabao\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/users/login",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-2-2 Đăng nhập(dành cho ứng viên) khi để trông u, password đúng",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(pm.response.code == 200){\r",
+							"    pm.test(\"Đăng nhập thành công\");\r",
+							"}else if(pm.response.code == 400){\r",
+							"    message = \"Tài khoản hoặc mật khẩu không đúng\";\r",
+							"    if(pm.response.json().message == message){\r",
+							"        pm.test(\"Tài khoản người dùng không tồn tại\");\r",
+							"    }else{\r",
+							"        pm.test(\"Mật khẩu không hợp lệ, mật khẩu phải tối thiểu 8 kí tự, bao gồm chữ hoa, thường, số\");\r",
+							"    }\r",
+							"}else if(pm.response.code == 404){\r",
+							"     pm.test(\"Tài khoản người dùng không tồn tại\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account\":\"\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/users/login",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-2-3 Đăng nhập(dành cho ứng viên) khi để trống u, password sai <8 ký tự",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(pm.response.code == 200){\r",
+							"    pm.test(\"Đăng nhập thành công\");\r",
+							"}else if(pm.response.code == 400){\r",
+							"    message = \"Tài khoản hoặc mật khẩu không đúng\";\r",
+							"    if(pm.response.json().message == message){\r",
+							"        pm.test(\"Tài khoản người dùng không tồn tại\");\r",
+							"    }else{\r",
+							"        pm.test(\"Mật khẩu không hợp lệ, mật khẩu phải tối thiểu 8 kí tự, bao gồm chữ hoa, thường, số\");\r",
+							"    }\r",
+							"}else if(pm.response.code == 404){\r",
+							"     pm.test(\"Tài khoản người dùng không tồn tại\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account\":\"\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/users/login",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-2-4 Đăng nhập(dành cho ứng viên) khi đúng username, password sai <8 ký tự",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(pm.response.code == 200){\r",
+							"    pm.test(\"Đăng nhập thành công\");\r",
+							"}else if(pm.response.code == 400){\r",
+							"    message = \"Tài khoản hoặc mật khẩu không đúng\";\r",
+							"    if(pm.response.json().message == message){\r",
+							"        pm.test(\"Tài khoản người dùng không tồn tại\");\r",
+							"    }else{\r",
+							"        pm.test(\"Mật khẩu không hợp lệ, mật khẩu phải tối thiểu 8 kí tự, bao gồm chữ hoa, thường, số\");\r",
+							"    }\r",
+							"}else if(pm.response.code == 404){\r",
+							"     pm.test(\"Tài khoản người dùng không tồn tại\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account\":\"nguyenphamgiabao\",\r\n    \"password\":\"1234567\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/users/login",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-2-5 Đăng nhập(dành cho ứng viên) khi đúng username, password sai 8 ký tự thường",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(pm.response.code == 200){\r",
+							"    pm.test(\"Đăng nhập thành công\");\r",
+							"}else if(pm.response.code == 400){\r",
+							"    message = \"Tài khoản hoặc mật khẩu không đúng\";\r",
+							"    if(pm.response.json().message == message){\r",
+							"        pm.test(\"Tài khoản người dùng không tồn tại\");\r",
+							"    }else{\r",
+							"        pm.test(\"Mật khẩu không hợp lệ, mật khẩu phải tối thiểu 8 kí tự, bao gồm chữ hoa, thường, số\");\r",
+							"    }\r",
+							"}else if(pm.response.code == 404){\r",
+							"     pm.test(\"Tài khoản người dùng không tồn tại\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account\":\"\",\r\n    \"password\":\"nguyenphamgiabao\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/users/login",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-2-6 Đăng nhập(dành cho ứng viên) khi đúng username, password sai 8 ký tự hoa",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(pm.response.code == 200){\r",
+							"    pm.test(\"Đăng nhập thành công\");\r",
+							"}else if(pm.response.code == 400){\r",
+							"    message = \"Tài khoản hoặc mật khẩu không đúng\";\r",
+							"    if(pm.response.json().message == message){\r",
+							"        pm.test(\"Tài khoản người dùng không tồn tại\");\r",
+							"    }else{\r",
+							"        pm.test(\"Mật khẩu không hợp lệ, mật khẩu phải tối thiểu 8 kí tự, bao gồm chữ hoa, thường, số\");\r",
+							"    }\r",
+							"}else if(pm.response.code == 404){\r",
+							"     pm.test(\"Tài khoản người dùng không tồn tại\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account\":\"\",\r\n    \"password\":\"NGUYENPHAMGIABAO\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/users/login",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-2-7 Đăng nhập(dành cho ứng viên) khi đúng username, password sai 8 ký tự số",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(pm.response.code == 200){\r",
+							"    pm.test(\"Đăng nhập thành công\");\r",
+							"}else if(pm.response.code == 400){\r",
+							"    message = \"Tài khoản hoặc mật khẩu không đúng\";\r",
+							"    if(pm.response.json().message == message){\r",
+							"        pm.test(\"Tài khoản người dùng không tồn tại\");\r",
+							"    }else{\r",
+							"        pm.test(\"Mật khẩu không hợp lệ, mật khẩu phải tối thiểu 8 kí tự, bao gồm chữ hoa, thường, số\");\r",
+							"    }\r",
+							"}else if(pm.response.code == 404){\r",
+							"     pm.test(\"Tài khoản người dùng không tồn tại\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account\":\"\",\r\n    \"password\":\"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/users/login",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-3-1 Đăng nhập(dành cho nhà tuyển dụng) đúng với username và password",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(pm.response.code == 200){\r",
+							"    pm.test(\"Đăng nhập thành công\");\r",
+							"}else if(pm.response.code == 400){\r",
+							"    message = \"Tài khoản hoặc mật khẩu không đúng\";\r",
+							"    if(pm.response.json().message == message){\r",
+							"        pm.test(\"Tài khoản người dùng không tồn tại\");\r",
+							"    }else{\r",
+							"        pm.test(\"Mật khẩu không hợp lệ, mật khẩu phải tối thiểu 8 kí tự, bao gồm chữ hoa, thường, số\");\r",
+							"    }\r",
+							"}else if(pm.response.code == 404){\r",
+							"     pm.test(\"Tài khoản người dùng không tồn tại\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account\":\"nguyenphamgiabao\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/company/login-company",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"company",
+						"login-company"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-3-2 Đăng nhập(dành cho nhà tuyển dụng) username để trống và password đúng",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(pm.response.code == 200){\r",
+							"    pm.test(\"Đăng nhập thành công\");\r",
+							"}else if(pm.response.code == 400){\r",
+							"    message = \"Tài khoản hoặc mật khẩu không đúng\";\r",
+							"    if(pm.response.json().message == message){\r",
+							"        pm.test(\"Tài khoản người dùng không tồn tại\");\r",
+							"    }else{\r",
+							"        pm.test(\"Mật khẩu không hợp lệ, mật khẩu phải tối thiểu 8 kí tự, bao gồm chữ hoa, thường, số\");\r",
+							"    }\r",
+							"}else if(pm.response.code == 404){\r",
+							"     pm.test(\"Tài khoản người dùng không tồn tại\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account\":\"\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/company/login-company",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"company",
+						"login-company"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-3-3 Đăng nhập(dành cho nhà tuyển dụng) username để trống, password sai <8 ký tự",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(pm.response.code == 200){\r",
+							"    pm.test(\"Đăng nhập thành công\");\r",
+							"}else if(pm.response.code == 400){\r",
+							"    message = \"Tài khoản hoặc mật khẩu không đúng\";\r",
+							"    if(pm.response.json().message == message){\r",
+							"        pm.test(\"Tài khoản người dùng không tồn tại\");\r",
+							"    }else{\r",
+							"        pm.test(\"Mật khẩu không hợp lệ, mật khẩu phải tối thiểu 8 kí tự, bao gồm chữ hoa, thường, số\");\r",
+							"    }\r",
+							"}else if(pm.response.code == 404){\r",
+							"     pm.test(\"Tài khoản người dùng không tồn tại\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account\":\"\",\r\n    \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/company/login-company",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"company",
+						"login-company"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-3-4 Đăng nhập(dành cho nhà tuyển dụng) đúng username, password sai <8 ký tự thường",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(pm.response.code == 200){\r",
+							"    pm.test(\"Đăng nhập thành công\");\r",
+							"}else if(pm.response.code == 400){\r",
+							"    message = \"Tài khoản hoặc mật khẩu không đúng\";\r",
+							"    if(pm.response.json().message == message){\r",
+							"        pm.test(\"Tài khoản người dùng không tồn tại\");\r",
+							"    }else{\r",
+							"        pm.test(\"Mật khẩu không hợp lệ, mật khẩu phải tối thiểu 8 kí tự, bao gồm chữ hoa, thường, số\");\r",
+							"    }\r",
+							"}else if(pm.response.code == 404){\r",
+							"     pm.test(\"Tài khoản người dùng không tồn tại\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account\":\"nguyenphamgiabao\",\r\n    \"password\":\"nguyen\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/company/login-company",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"company",
+						"login-company"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-3-5 Đăng nhập(dành cho nhà tuyển dụng) đúng username, password sai -8 ký tự thường",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(pm.response.code == 200){\r",
+							"    pm.test(\"Đăng nhập thành công\");\r",
+							"}else if(pm.response.code == 400){\r",
+							"    message = \"Tài khoản hoặc mật khẩu không đúng\";\r",
+							"    if(pm.response.json().message == message){\r",
+							"        pm.test(\"Tài khoản người dùng không tồn tại\");\r",
+							"    }else{\r",
+							"        pm.test(\"Mật khẩu không hợp lệ, mật khẩu phải tối thiểu 8 kí tự, bao gồm chữ hoa, thường, số\");\r",
+							"    }\r",
+							"}else if(pm.response.code == 404){\r",
+							"     pm.test(\"Tài khoản người dùng không tồn tại\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account\":\"nguyenphamgiabao\",\r\n    \"password\":\"1234567\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/company/login-company",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"company",
+						"login-company"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-3-6 Đăng nhập(dành cho nhà tuyển dụng) đúng username, password sai  ký tự hoa",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(pm.response.code == 200){\r",
+							"    pm.test(\"Đăng nhập thành công\");\r",
+							"}else if(pm.response.code == 400){\r",
+							"    message = \"Tài khoản hoặc mật khẩu không đúng\";\r",
+							"    if(pm.response.json().message == message){\r",
+							"        pm.test(\"Tài khoản người dùng không tồn tại\");\r",
+							"    }else{\r",
+							"        pm.test(\"Mật khẩu không hợp lệ, mật khẩu phải tối thiểu 8 kí tự, bao gồm chữ hoa, thường, số\");\r",
+							"    }\r",
+							"}else if(pm.response.code == 404){\r",
+							"     pm.test(\"Tài khoản người dùng không tồn tại\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account\":\"nguyenphamgiabao\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/company/login-company",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"company",
+						"login-company"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-3-7 Đăng nhập(dành cho nhà tuyển dụng) đúng username, password sai ký tự số",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(pm.response.code == 200){\r",
+							"    pm.test(\"Đăng nhập thành công\");\r",
+							"}else if(pm.response.code == 400){\r",
+							"    message = \"Tài khoản hoặc mật khẩu không đúng\";\r",
+							"    if(pm.response.json().message == message){\r",
+							"        pm.test(\"Tài khoản người dùng không tồn tại\");\r",
+							"    }else{\r",
+							"        pm.test(\"Mật khẩu không hợp lệ, mật khẩu phải tối thiểu 8 kí tự, bao gồm chữ hoa, thường, số\");\r",
+							"    }\r",
+							"}else if(pm.response.code == 404){\r",
+							"     pm.test(\"Tài khoản người dùng không tồn tại\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account\":\"nguyenphamgiabao\",\r\n    \"password\":\"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/company/login-company",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"company",
+						"login-company"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-4-1 Lấy danh sách công việc thành công",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Lấy danh sách thành công\", function (){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Có lỗi khi lấy danh sách\", function (){\r",
+							"    pm.response.to.have.status(500);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/work/list-work",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"work",
+						"list-work"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-4-2 Lấy danh sách công việc thất bại",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Lấy danh sách thành công\", function (){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Có lỗi khi lấy danh sách\", function (){\r",
+							"    pm.response.to.have.status(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/work/list-work",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"work",
+						"list-work"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-5-1 Lấy danh sách thông tin user thành công và có token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(pm.response.code == 200){\r",
+							"    pm.test(\"Thành công, trả về thông tin người dùng\");\r",
+							"}else if(pm.response.code == 500){\r",
+							"    pm.test(\"Có lỗi trong quá trình lấy dữ liệu\");\r",
+							"}else if(pm.response.code == 403){\r",
+							"     pm.test(\"Chưa đăng nhập\");\r",
+							"}else if(pm.response.code == 401){\r",
+							"     pm.test(\"Lỗi forbidden\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/users/get-information-user",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"get-information-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-5-2 Lấy danh sách thông tin user không thành công và không có token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(pm.response.code == 200){\r",
+							"    pm.test(\"Thành công, trả về thông tin người dùng\");\r",
+							"}else if(pm.response.code == 500){\r",
+							"    pm.test(\"Có lỗi trong quá trình lấy dữ liệu\");\r",
+							"}else if(pm.response.code == 403){\r",
+							"     pm.test(\"Chưa đăng nhập\");\r",
+							"}else if(pm.response.code == 401){\r",
+							"     pm.test(\"Lỗi forbidden\");\r",
+							"}\r",
+							"// về cơ bản, vì trong đặc tả k nói đến so sánh với 401 nên em k làm, em có thể thêm vào nếu thấy cần thiết, còn mentor có hỏi thì em cũng cần biết cách trả lời"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/users/get-information-user",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"get-information-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-5-3 Lấy danh sách thông tin user không thành công và có token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(pm.response.code == 200){\r",
+							"    pm.test(\"Thành công, trả về thông tin người dùng\");\r",
+							"}else if(pm.response.code == 500){\r",
+							"    pm.test(\"Có lỗi trong quá trình lấy dữ liệu\");\r",
+							"}else if(pm.response.code == 403){\r",
+							"     pm.test(\"Chưa đăng nhập\");\r",
+							"}else if(pm.response.code == 401){\r",
+							"     pm.test(\"Lỗi forbidden\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/users/get-information-user",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"get-information-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-5-4 Điền sai token lỗi 403",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(pm.response.code == 200){\r",
+							"    pm.test(\"Thành công, trả về thông tin người dùng\");\r",
+							"}else if(pm.response.code == 500){\r",
+							"    pm.test(\"Có lỗi trong quá trình lấy dữ liệu\");\r",
+							"}else if(pm.response.code == 403){\r",
+							"     pm.test(\"Chưa đăng nhập\");\r",
+							"}else if(pm.response.code == 401){\r",
+							"     pm.test(\"Lỗi forbidden\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/users/get-information-user",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"get-information-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-5-5 Điền sai token lỗi 500",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(pm.response.code == 200){\r",
+							"    pm.test(\"Thành công, trả về thông tin người dùng\");\r",
+							"}else if(pm.response.code == 500){\r",
+							"    pm.test(\"Có lỗi trong quá trình lấy dữ liệu\");\r",
+							"}else if(pm.response.code == 403){\r",
+							"     pm.test(\"Chưa đăng nhập\");\r",
+							"}else if(pm.response.code == 401){\r",
+							"     pm.test(\"Lỗi forbidden\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/users/get-information-user",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"get-information-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-6-1 Lấy danh sách các ứng viên thành công và có token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(pm.response.code == 200){\r",
+							"    pm.test(\"Đăng nhập thành công\");\r",
+							"}else if(pm.response.code == 500){\r",
+							"   pm.test(\"Có lỗi trong quá trình lấy dữ liệu\");\r",
+							"}else if(pm.response.code == 403){\r",
+							"     pm.test(\"Forbidden\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/work-user/get-all-admin",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"work-user",
+						"get-all-admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-6-2 Lấy danh sách các ứng viên không thành công và không có token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(pm.response.code == 200){\r",
+							"    pm.test(\"Đăng nhập thành công\");\r",
+							"}else if(pm.response.code == 500){\r",
+							"   pm.test(\"Có lỗi trong quá trình lấy dữ liệu\");\r",
+							"}else if(pm.response.code == 403){\r",
+							"     pm.test(\"Forbidden\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/work-user/get-all-admin",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"work-user",
+						"get-all-admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-6-3 Lấy danh sách các ứng viên không thành công và có token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(pm.response.code == 200){\r",
+							"    pm.test(\"Đăng nhập thành công\");\r",
+							"}else if(pm.response.code == 500){\r",
+							"   pm.test(\"Có lỗi trong quá trình lấy dữ liệu\");\r",
+							"}else if(pm.response.code == 403){\r",
+							"     pm.test(\"Forbidden\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/work-user/get-all-admin",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"work-user",
+						"get-all-admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-6-4 Điền sai token lỗi 403",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(pm.response.code == 200){\r",
+							"    pm.test(\"Đăng nhập thành công\");\r",
+							"}else if(pm.response.code == 500){\r",
+							"   pm.test(\"Có lỗi trong quá trình lấy dữ liệu\");\r",
+							"}else if(pm.response.code == 403){\r",
+							"     pm.test(\"Forbidden\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/work-user/get-all-admin",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"work-user",
+						"get-all-admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-6-5 Điền sai token lỗi 500",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(pm.response.code == 200){\r",
+							"    pm.test(\"Đăng nhập thành công\");\r",
+							"}else if(pm.response.code == 500){\r",
+							"   pm.test(\"Có lỗi trong quá trình lấy dữ liệu\");\r",
+							"}else if(pm.response.code == 403){\r",
+							"     pm.test(\"Forbidden\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/work-user/get-all-admin",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"work-user",
+						"get-all-admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-7-1 Ứng tuyển thành công điền jobid và token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(pm.response.code == 200){\r",
+							"    pm.test(\"Ứng tuyển thành công\");\r",
+							"} else if(pm.response.code == 403){\r",
+							"    pm.test(\"Forbidden\");\r",
+							"}else if(pm.response.code == 401){\r",
+							"    pm.test(\"Lỗi ứng tuyển không thành công\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"jobid\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/application/create-application",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"application",
+						"create-application"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-7-2 Thiếu token có jobid",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(pm.response.code == 200){\r",
+							"    pm.test(\"Ứng tuyển thành công\");\r",
+							"} else if(pm.response.code == 403){\r",
+							"    pm.test(\"Forbidden\");\r",
+							"}else if(pm.response.code == 401){\r",
+							"    pm.test(\"Lỗi ứng tuyển không thành công\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"jobid\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/application/create-application",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"application",
+						"create-application"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-7-3 Thiếu jobid có token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(pm.response.code == 200){\r",
+							"    pm.test(\"Ứng tuyển thành công\");\r",
+							"} else if(pm.response.code == 403){\r",
+							"    pm.test(\"Forbidden\");\r",
+							"}else if(pm.response.code == 401){\r",
+							"    pm.test(\"Lỗi ứng tuyển không thành công\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    // \"jobid\":\"3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/application/create-application",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"application",
+						"create-application"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-7-4 Điền sai token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(pm.response.code == 200){\r",
+							"    pm.test(\"Ứng tuyển thành công\");\r",
+							"} else if(pm.response.code == 403){\r",
+							"    pm.test(\"Forbidden\");\r",
+							"}else if(pm.response.code == 401){\r",
+							"    pm.test(\"Lỗi ứng tuyển không thành công\");\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"jobid\":\"4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/application/create-application",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"application",
+						"create-application"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-8-1 Lấy danh sách công ty thành công",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Thành công, trả về danh sách công ty\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Có lỗi trong quá trình lấy dữ liệu\", function () {\r",
+							"    pm.response.to.have.status(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/company/getAllCompany",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"company",
+						"getAllCompany"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-8-2 Lấy danh sách công ty thất bại",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"postman.setNextRequest(\"1-10-1 Lấy danh sách các user\")\r",
+							"pm.test(\"Thành công, trả về danh sách công ty\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Có lỗi trong quá trình lấy dữ liệu\", function () {\r",
+							"    pm.response.to.have.status(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/company/getAllCompany",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"company",
+						"getAllCompany"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-10-1 Lấy danh sách các user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Thành công, trả về danh sách các đơn ứng tuyển\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Có lỗi trong quá trình lấy dữ liệu\", function () {\r",
+							"    pm.response.to.have.status(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/users/getAllUsers",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"getAllUsers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-10-2 Lấy danh sách các user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"postman.setNextRequest(\"1-9-1 Lấy danh sách các đơn ứng tuyển thành công\")\r",
+							"pm.test(\"Thành công, trả về danh sách các đơn ứng tuyển\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Có lỗi trong quá trình lấy dữ liệu\", function () {\r",
+							"    pm.response.to.have.status(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/users/getAllUsers",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"getAllUsers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-9-1 Lấy danh sách các đơn ứng tuyển thành công",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Thành công, trả về danh sách các đơn ứng tuyển\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Có lỗi trong quá trình lấy dữ liệu\", function () {\r",
+							"    pm.response.to.have.status(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/application/getall-application",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"application",
+						"getall-application"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1-9-2 Lấy danh sách các đơn ứng tuyển thất bại",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Thành công, trả về danh sách các đơn ứng tuyểns\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Có lỗi trong quá trình lấy dữ liệu\", function () {\r",
+							"    pm.response.to.have.status(500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://13.228.39.1:5000/api/application/getall-application",
+					"protocol": "http",
+					"host": [
+						"13",
+						"228",
+						"39",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"application",
+						"getall-application"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
